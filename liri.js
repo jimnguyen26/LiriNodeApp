@@ -1,8 +1,8 @@
+require("dotenv").config();
+
 const keys = require("./keys");
 
 console.log(keys);
 
-// require(".env").config();
-
-// const spotify = new spotify(keys.spotify);
+const spotify = new Spotify(keys.spotify);
 

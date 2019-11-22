@@ -17,5 +17,7 @@
   },
   "homepage": "https://github.com/jimnguyen26/LiriNodeApp#readme",
   "description": "",
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
