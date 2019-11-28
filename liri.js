@@ -4,7 +4,7 @@ const keys = require("./keys.js");
 const axios = require('axios');
 const Spotify = require('node-spotify-api');
 const spotify = new Spotify(keys.spotify);
-const spotifyTest = process.env.SPOTIFY_ID
+const fs = require("fs");
 const moment = require('moment');
 moment().format();
 
@@ -94,10 +94,20 @@ function movieSearch(movie) {
                 console.log("Actors: " + res.data.Actors);
             } 
             else {
-                movieThis("Mr. Nobody");
+                movieSearch("Mr. Nobody");
             }
         }
     ).catch(error => {  
         console.log(error);
+    });
+}
+
+function doRandom() {
+    fs.readFile("random.txt", "utf8", function(error, data) {
+        const dataArr = data.split(",");
+        spotifySong(dataArr[1])
+        if (error) {
+            return console.log(error);
+        }
     });
 }
