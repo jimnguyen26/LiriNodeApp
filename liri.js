@@ -9,8 +9,8 @@ const moment = require('moment');
 moment().format();
 
 
-let category = process.argv[2]
-let searchTitle = process.argv[3]
+const category = process.argv[2]
+const searchTitle = process.argv[3]
 
 switch (category) {
     case "concert-this":
@@ -20,7 +20,7 @@ switch (category) {
         spotifySong(searchTitle);
         break;
     case "movie-this":
-        movieThis(searchTitle);
+        movieSearch(searchTitle);
         break;
     case "do-what-it-says":
         doRandom();
@@ -28,7 +28,7 @@ switch (category) {
 }
 
 function searchForBands(artist) {
-    const queryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
+    const queryUrl = `https://rest.bandsintown.com/artists/${(artist)}/events?app_id=codingbootcamp`;
     axios.get(queryUrl).then(
         (res => {
             if(res.data[0].venue !=  undefined) {
@@ -76,6 +76,28 @@ function errorSpotify() {
             }
         }
     }).catch(error => {  
+        console.log(error);
+    });
+}
+
+function movieSearch(movie) {
+    axios.get(`http://www.omdbapi.com/?t=${(movie)}&y=&plot=short&tomatoes=true&apikey=trilogy`).then
+        (res => {
+            if (res.data.Title != undefined) {
+                console.log("Title: " + res.data.Title);
+                console.log("Year Released: " + res.data.Year);
+                console.log("IMDB Rating: " + res.data.imdbRating);
+                console.log("RottenTomatoes: " + res.data.tomatoRating);
+                console.log("Country: " + res.data.Country);
+                console.log("Language: " + res.data.Language);
+                console.log("Plot: " + res.data.Plot);
+                console.log("Actors: " + res.data.Actors);
+            } 
+            else {
+                movieThis("Mr. Nobody");
+            }
+        }
+    ).catch(error => {  
         console.log(error);
     });
 }
