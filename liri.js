@@ -66,7 +66,7 @@ function errorSpotify() {
     spotify
     .search({ type: 'track', query: 'The Sign' })
     .then(res => {
-        for (var i=0;i < res.tracks.items.length; i++) {
+        for (var i = 0; i < res.tracks.items.length; i++) {
             if (res.tracks.items[i].artists[0].name === "Ace of Base") {
                 console.log("Artist: " + res.tracks.items[i].artists[0].name);
                 console.log("Song Title: " + res.tracks.items[i].name);
