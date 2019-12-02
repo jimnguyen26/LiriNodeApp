@@ -17,6 +17,7 @@ and title of movie, year film was released, IMDB rating, Rotten Tomatoes rating,
 
 Enter: 
 - node liri.js do-what-it-says 
+
 and a Spotify search for "I Want it That Way" will return as a default.
 
 Dependancies with this app includes:
