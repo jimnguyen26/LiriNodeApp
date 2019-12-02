@@ -15,10 +15,13 @@ To search for movie info, enter in the command line:
 
 and title of movie, year film was released, IMDB rating, Rotten Tomatoes rating, country where film was produced, language it's in, plot of movie, and actors in the movie will return. Enter an incorrect movie title and 'Mr. Nobody' movie info will return.
 
+
 Enter: 
 - node liri.js do-what-it-says 
 
 and a Spotify search for "I Want it That Way" will return as a default.
+
+
 
 Dependancies with this app includes:
 - Axios (OMDB and Bands in Town API)
