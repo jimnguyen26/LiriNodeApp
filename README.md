@@ -2,7 +2,8 @@
 
 Hello! Welcome to my Liri Node App where you can look up concert, song, and movie info from Terminal command line. We will be using Bands in Town Artist Events API to look up current concert information, looks up songs from Spotify API keys, and IMDB for movie information. This app uses the Switch Case to change which category you're going from. 
 
-To search for concert info, simply use your command line in Terminal and enter: node liri.js concert-this "enter artist here" 
+To search for concert info, simply use your command line in Terminal and enter: 
+-node liri.js concert-this "enter artist here" 
 and name of venue, location, and date of the event will return.
 
 To search for song info, enter in your command line: node liri.js spotify-this-song "enter song title here" 
