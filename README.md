@@ -21,10 +21,10 @@ Enter:
 and a Spotify search for "I Want it That Way" will return as a default.
 
 Dependancies with this app includes:
-Axios (OMDB and Bands in Town API)
-Node Spotify API
-Moment
-DotEnv
-File System
+- Axios (OMDB and Bands in Town API)
+- Node Spotify API
+- Moment
+- DotEnv
+- File System
 
 // Could not figure out how to add screen shot images to the README.md page as examples.
